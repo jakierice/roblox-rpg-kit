@@ -111,7 +111,7 @@ should be a number greater than zero and less than one hundred. It is a percenta
 4. It needs a Stats folder! The easiest way to get one would be to duplicate one from an already existing enemy.
 5. Adjust the stats as needed. The rank value in Stats is purely visual and has no effect on the enemy itself.
 
-#### A a New Type of Enemy
+#### Add a New Type of Enemy
 
 This one requires at least a little bit of scripting, although you could copy an already existing EnemyType in the code and use it as
 a template.
@@ -166,18 +166,19 @@ you want to link the portal to in the explorer after clicking on the value.
 1. Duplicate an already existing shop in StarterGui.GameUI.Menus (Not the pawn shop)
 2. Name it something nice
 3. Change the Title TextLabel to something of your choice; it must represent the menu you're using.
-4. Modify the contents of the ShopItems folder. You can either copy already existing items or create new items using the following guide:
-<SHOP ITEMS>
-- Insert a folder into ShopItems and make sure the name corresponds to something in ReplicatedStorage.Items OR ReplicatedStorage.Armor
-- Inside the new item you've created, insert a StringValue named "Description" - this will serve as your item description, so set the value
-of it to something informational about the item.
-- Inside of the item, insert a StringValue named "ItemType" - the default accepted values are "Weapon" and "Armor"
-The ItemType value changes where the system looks for the item; "Weapon" looks in ReplicatedStorage.Items and "Armor" looks in
-ReplicatedStorage.Armor
-- Finally, insert a Color3Value inside the item named "TextColor" - This can be any color you want
+4. Modify the contents of the ShopItems folder. You can either copy already existing items or create new items using the guide found in the next section.
 5. You have a new shop, but no way to open it. To do this, there is a MenuTriggers folder in workspace; this folder is full of spheres that
 open menus when you come in contact with them. They turn invisible once the server starts running. Duplicate an already existing trigger and
 move it to where you want the menu to open, feel free to resize it. Lastly, set the name of the trigger to the exact menu name you set earlier.
+
+#### Create New Shop Items
+1. Insert a folder into ShopItems and make sure the name corresponds to something in ReplicatedStorage.Items OR ReplicatedStorage.Armor
+2. Inside the new item you've created, insert a StringValue named "Description" - this will serve as your item description, so set the value
+of it to something informational about the item.
+3. Inside of the item, insert a StringValue named "ItemType" - the default accepted values are "Weapon" and "Armor"
+The ItemType value changes where the system looks for the item; "Weapon" looks in ReplicatedStorage.Items and "Armor" looks in
+ReplicatedStorage.Armor
+4. Finally, insert a Color3Value inside the item named "TextColor" - This can be any color you want
 
 ### Add Armor
 
