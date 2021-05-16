@@ -2,6 +2,26 @@
 
 **IMPORTANT**: THIS SYSTEM DOES NOT COME WITH ANTI CHEAT FOR THINGS SUCH AS TELEPORTATION, FLYING, OR OTHER RELATED CLIENT EXPLOITS
 
+- [Credit](#credit)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Server](#server)
+    - [RPGSystem in ServerScriptService](#rpgsystem-in-serverscriptservice)
+    - [Remotes in Workspace](#remotes-in-workspace)
+    - [Modules in ReplicatedStorage](#modules-in-replicatedstorage)
+- [Client](#client)
+    - [RPGClient in StarterPlayerScripts](#rpgclient-in-starterplayerscripts)
+    - [Shop scripts](#shop-scripts)
+- [Summary](#summary)
+- [How to Extend](#how-to-extend)
+- [Add a Weapon](#add-a-weapon)
+- [Add an Enemy](#add-an-enemy)
+    - [A a New Type of Enemy](#a-a-new-type-of-enemy)
+- [Add Custom Animations](#add-custom-animations)
+- [Add an Area](#add-an-area)
+- [Add a Shop and Items](#add-a-shop-and-items)
+    - [Add Armor](#add-armor)
+
 ## Credit
 
 This project is based off of [Chrythm's](https://devforum.roblox.com/u/chrythm) open source [RPG Kit](https://devforum.roblox.com/u/chrythm) that was released through a [Roblopx Dev Forum article](https://devforum.roblox.com/t/chrythms-rpg-kit-free/436287).
@@ -60,11 +80,11 @@ That's the basic structure of the systems. Nearly everything is automated, so yo
 simple things like new weapons or enemies. HOWEVER, new features for weapons or EnemyTypes do require some coding knowledge.
 Luckily, I have presets built in already to help if needed.
 
-## How to Extends
+## How to Extend
 
 The next important information is all about how to make additions to your game using this kit!
 
-### HOW TO ADD A WEAPON
+### Add a Weapon
 
 1. You need a weapon model! This can be a mesh, meshpart, union, or even a part.
 2. You need the actual tool itself, I prefer duplicating a weapon that already exists and modifying it to fit your desires.
@@ -83,7 +103,7 @@ and put it inside the one you're working on. These values are what determine how
 with the name of an item in ReplcaitedStorage.Items, and then insert a NumberValue called "DropChance" inside that. This chance
 should be a number greater than zero and less than one hundred. It is a percentage**
 
-### HOW TO ADD AN ENEMY
+### Add an Enemy
 
 1. You need a rig; this can be obtained with the built-in Rig Builder plugin or by duplicating an already existing enemy.
 2. Make sure the humanoid inside the rig is named "EnemyHumanoid"
@@ -91,7 +111,7 @@ should be a number greater than zero and less than one hundred. It is a percenta
 4. It needs a Stats folder! The easiest way to get one would be to duplicate one from an already existing enemy.
 5. Adjust the stats as needed. The rank value in Stats is purely visual and has no effect on the enemy itself.
 
-### HOW TO ADD AN ENEMYTYPE
+#### A a New Type of Enemy
 
 This one requires at least a little bit of scripting, although you could copy an already existing EnemyType in the code and use it as
 a template.
@@ -108,7 +128,7 @@ EnemyType I made for Goblins.
 5. With your new function for the new EnemyType, you have total control over what the enemy does when it attacks. Refer to the rest of the
 EnemyTypes that were pre-made for assistance.
 
-### HOW TO ADD A CUSTOM ANIMATION
+### Add Custom Animations
 
 1. Make an animation in the animation editor or find one you already made.
 2. Export it to the roblox website.
@@ -117,7 +137,7 @@ EnemyTypes that were pre-made for assistance.
 4b. If you want to change enemy animations for walking and idling, change their EnemyType folder values for WalkAnimation and IdleAnimation.
 4c. If you want to add or change attack animations, refer to the How-To for EnemyTypes above.
 
-### HOW TO ADD AN AREA
+### Add an Area
 
 1. Duplicate an already existing area and give it a unique name.
 2. You can either build a new map for the area or change an already existing map. If you are making a new map, delete everything in the "Map"
@@ -141,7 +161,7 @@ duplicate an already existing SpawnRegion and use it as a template.
 RequiredRank value to the Rank you want players to reach before entering; for the AreaToTeleportTo, you'll need to actually click on the area
 you want to link the portal to in the explorer after clicking on the value.
 
-### HOW TO ADD A SHOP & ITEMS
+### Add a Shop and Items
 
 1. Duplicate an already existing shop in StarterGui.GameUI.Menus (Not the pawn shop)
 2. Name it something nice
@@ -159,7 +179,7 @@ ReplicatedStorage.Armor
 open menus when you come in contact with them. They turn invisible once the server starts running. Duplicate an already existing trigger and
 move it to where you want the menu to open, feel free to resize it. Lastly, set the name of the trigger to the exact menu name you set earlier.
 
-### HOW TO ADD ARMOR
+### Add Armor
 
 1. Duplicate an already existing HumanoidDescription in ReplicatedStorage.Armor and name it something unique
 2. Find a bundle/package in the Roblox catalog/avatar shop and scroll down to see the items included.
